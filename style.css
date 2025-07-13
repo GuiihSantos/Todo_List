@@ -41,13 +41,13 @@ hr{
 
 /* container-search */
 
-.search {
+.container-search {
     display: flex;
-    flex-direction: column;  
-    margin-bottom: 20px;
+    flex-direction: column;
+    margin-bottom: 20px;align-items: center;
 }
 
-.search input,.search input::placeholder {
+.container-search input,.container-search input::placeholder {
     padding: 5px;
     font-size: 15px;
 }
@@ -59,11 +59,22 @@ hr{
     font-size: 15px;
     font-weight: bolder;
 }
-.search input, .add-task {
+.container-search input, .add-task {
     height: 40px;
     width: 400px;
-    border-radius: 10px;
+    border-radius: 10px;   
 }
+
+.searchs {
+     background-color: #27272a;
+}
+
+.searchs input{
+    width: 1000px;
+    margin-right:5px ;
+    /* background-color: transparent; */
+}
+
 
 /* container-tasks */
 
@@ -122,8 +133,9 @@ input[type='checkbox']:checked + label {
     font-weight: bolder;
     padding: 5px;
      border-radius: 10px;
-    /* width: 400px; */
     width: 192px;
+
+    display: none;
 }
 
 button {

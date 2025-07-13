@@ -18,27 +18,22 @@
         <h1 class="title">Todo List</h1>
         
         
-        <section class="search">
-            <input type="text" placeholder="Adicione uma tarefa">
-            <button class="add-task">Adicionar</button>
+        <section class="container-search">
+            <input type="text"  id="newTask" placeholder="Adicione uma tarefa">
+            
+            <div class="searchs" >
+                <input type="text" class="search" id="search" placeholder="Pesquise seu tarefa">
+                <button class="add-task" id="add-task">Pesquisar</button>
+            </div>
+            
         </section>
 
 
-        <section class="tasks">
-            <div>
-                <input type="checkbox" class="checkbox">
-                <label>Estudar javaCriptid </label>
-                <button>❌</button>
-           </div>
-
-            <div>
-                <input type="checkbox" class="checkbox">
-                <label>Estudar javaCriptid dhdhdhdhd hdhdhddmdmd dkdkdk dkdkdkdk</label>
-                <button>❌</button>
-           </div>           
+        <section class="tasks" id="tasks">
+     
         </section>
 
-        <button class="clear-tasks">Apagar Todas tarefas</button>
+        <button class="clear-tasks" id="clear-tasks">Apagar Todas tarefas</button>
     </main>
 
     <script src="app.js"></script>
