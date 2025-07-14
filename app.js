@@ -1,3 +1,5 @@
+// let banco = [{ tarefa: "tarefa1", status: "checked" }];
+
 function getbanco() {
   return JSON.parse(localStorage.getItem("TodoList")) ?? [];
 }
@@ -27,6 +29,7 @@ function atualizarTela(e) {
 function atualizarItem(index) {
   const banco = getbanco();
   banco[index].status = banco[index].status === "" ? "checked" : "";
+  setBanco(banco);
   atualizarTela();
 }
 
@@ -46,16 +49,35 @@ function itemClicado(e) {
 
   if (el.type === "checkbox") {
     const index = el.dataset.index;
+    console.log(index);
     atualizarItem(index);
+    atualizaPorcetagem();
   }
 }
 
 function apagarTodasTarefas(e) {
   const banco = getbanco();
-
   banco.splice(0, banco.length);
   setBanco(banco);
   atualizarTela();
+}
+
+function atualizaPorcetagem() {
+  const banco = getbanco();
+  let qtdChecked = 0;
+
+  banco.forEach((item) => {
+    if (item.status) {
+      qtdChecked++;
+    }
+  });
+
+  let pct = Math.floor((qtdChecked / banco.length) * 100);
+
+  document.querySelector(".search").style.width = `${pct}%`;
+  document
+    .querySelector(".search")
+    .setAttribute("placeholder", `${pct}% Concluido`);
 }
 
 function cadastraNovaTarefa(e) {
@@ -66,6 +88,7 @@ function cadastraNovaTarefa(e) {
   if (e.key === "Enter") {
     banco.push({ tarefa: e.target.value, status: "" });
     setBanco(banco);
+    atualizaPorcetagem();
     atualizarTela();
     e.target.value = ""; // Limpar tarefa do input
   }
@@ -84,4 +107,5 @@ document
   .addEventListener("click", apagarTodasTarefas);
 
 document.getElementById("tasks").addEventListener("click", itemClicado);
+
 atualizarTela();

@@ -66,13 +66,17 @@ hr{
 }
 
 .searchs {
-     background-color: #27272a;
+     background-color: var(--text-color);
+     width: 100%;
+     border-radius: 10px;
+
 }
 
 .searchs input{
-    width: 1000px;
+
     margin-right:5px ;
-    /* background-color: transparent; */
+    background-color:  #fdc700;
+    transition: all ease .5s;
 }
 
 
