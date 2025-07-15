@@ -8,11 +8,12 @@
 }
 
 body {
-
        display: flex;
+       flex-direction: column;
        justify-content: center;
        align-items: center;
        background-color: #27272a;
+    
 }
 
 h1 {
@@ -36,7 +37,6 @@ hr{
     align-items: center;
     width: 100%;
     height: 100%;
-    /* border: 1px solid red; */
 }
 
 /* container-search */
@@ -44,7 +44,8 @@ hr{
 .container-search {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;align-items: center;
+    margin-bottom: 20px;
+    align-items: center;
 }
 
 .container-search input,.container-search input::placeholder {
@@ -66,15 +67,12 @@ hr{
 }
 
 .searchs {
-     background-color: var(--text-color);
-     width: 100%;
-     border-radius: 10px;
+     border: 2px solid var(--text-color);
+     z-index: 1;
 
 }
 
 .searchs input{
-
-    margin-right:5px ;
     background-color:  #fdc700;
     transition: all ease .5s;
 }
@@ -138,12 +136,18 @@ input[type='checkbox']:checked + label {
     padding: 5px;
      border-radius: 10px;
     width: 192px;
+    margin-bottom: 20px;
 
     display: none;
 }
 
 button {
     cursor: pointer;
+}
+
+footer a {
+   color: var(--text-color);
+   text-decoration: none;
 }
 
 

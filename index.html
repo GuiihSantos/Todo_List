@@ -13,27 +13,25 @@
     
 </head>
 <body>
-    
     <main class="container-main">
         <h1 class="title">Todo List</h1>
-        
         
         <section class="container-search">
             <input type="text"  id="newTask" placeholder="Adicione uma tarefa pressionando Enter">
             
-            <div class="searchs"  >
-                <input type="search" class="search" id="search" placeholder="% Tarefas concluidas" >
+            <div class="searchs">
+                <input type="text" class="search" id="search" placeholder="% Tarefas concluidas"  disabled >
             </div>
-            
         </section>
 
-
-        <section class="tasks" id="tasks">
-     
-        </section>
+        <section class="tasks" id="tasks"></section>
 
         <button class="clear-tasks" id="clear-tasks">Apagar Todas tarefas</button>
     </main>
+
+    <footer>
+       <a href="https://github.com/GuiihSantos" target="_blank">Criador: Guilherme Santos</a>
+    </footer>
 
     <script src="app.js"></script>
 </body>

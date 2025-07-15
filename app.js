@@ -59,6 +59,7 @@ function apagarTodasTarefas(e) {
   const banco = getbanco();
   banco.splice(0, banco.length);
   setBanco(banco);
+  document.querySelector(".search").style.width = `0`;
   atualizarTela();
 }
 
