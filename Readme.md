@@ -4,7 +4,7 @@
 
 Este é um aplicativo de **Lista de Tarefas** simples e intuitivo, desenvolvido utilizando **HTML**, **CSS** e, principalmente, **JavaScript puro**. O projeto serviu como um laboratório para aplicar e aprofundar meus conhecimentos em JavaScript, focando na manipulação do DOM e na persistência de dados. Ele permite aos usuários gerenciar suas tarefas diárias de forma eficiente, com a garantia de que os dados permanecerão salvos no navegador.
 
-<a href=" https://guiihsantos.github.io/Todo_List/" target="_blank">🔗 Acesse o projeto online</a>
+🔗 Acesse o projeto online
 https://guiihsantos.github.io/Todo_List/
 
 ## Funcionalidades do Projeto
